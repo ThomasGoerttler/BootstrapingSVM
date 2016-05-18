@@ -1,0 +1,1 @@
+python main.py heart_scale.txt
