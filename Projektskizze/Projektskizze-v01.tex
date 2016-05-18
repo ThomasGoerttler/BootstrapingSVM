@@ -1,0 +1,127 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Short Sectioned Assignment
+% LaTeX Template
+% Version 1.0 (5/5/12)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Frits Wenneker (http://www.howtotex.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[paper=a4, fontsize=11pt]{scrartcl} % A4 paper and 11pt font size
+
+\usepackage[T1]{fontenc} % Use 8-bit encoding that has 256 glyphs
+\usepackage{fourier} % Use the Adobe Utopia font for the document - comment this line to return to the LaTeX default
+\usepackage[english]{babel} % English language/hyphenation
+\usepackage{amsmath,amsfonts,amsthm} % Math packages
+\usepackage{enumitem}
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\usepackage{sectsty} % Allows customizing section commands
+\allsectionsfont{\centering \normalfont\scshape} % Make all sections centered, the default font and small caps
+
+\usepackage{fancyhdr} % Custom headers and footers
+\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
+\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
+\fancyfoot[L]{} % Empty left footer
+\fancyfoot[C]{} % Empty center footer
+\fancyfoot[R]{\thepage} % Page numbering for right footer
+\renewcommand{\headrulewidth}{0pt} % Remove header underlines
+\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
+\setlength{\headheight}{13.6pt} % Customize the height of the header
+
+\numberwithin{equation}{section} % Number equations within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{figure}{section} % Number figures within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+\numberwithin{table}{section} % Number tables within sections (i.e. 1.1, 1.2, 2.1, 2.2 instead of 1, 2, 3, 4)
+
+\setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
+
+%----------------------------------------------------------------------------------------
+%	TITLE SECTION
+%----------------------------------------------------------------------------------------
+
+\newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Create horizontal rule command with 1 argument of height
+
+\title{	
+\normalfont \normalsize 
+\textsc{Humboldt University of Berlin} \\ [25pt] % Your university, school and/or department name(s)
+\horrule{0.5pt} \\[0.4cm] % Thin top horizontal rule
+\huge Bootstrapping the SVM \\ % The assignment title
+\horrule{2pt} \\[0.5cm] % Thick bottom horizontal rule
+}
+
+\author{Patricia Craja, Thomas Goerttler, Christian Koopmann} % Your name
+
+\date{\normalsize\today} % Today's date or a custom date
+
+\begin{document}
+
+\maketitle % Print the title
+
+%----------------------------------------------------------------------------------------
+%	PROBLEM 1
+%----------------------------------------------------------------------------------------
+
+\section{Problem Setting}
+\subsection{Introduction}
+Support Vector Machines are one of the most successful methods of Machine Learning. By reducing non-linear complex decisions problems to linear problems through application of the Kernel-Trick, they represent a computationally efficient way to tackle these problems. SVMs based on certain kernels (e.g. Gaussian RBF Kernel) are non parametric methods. Since the distribution of the underlying data is generally unknown so is the finite sample distribution of these methods. There has been considerable research on the asymptotic distribution of SVMs, which have been shown to be asymptotically normally distributed under certain conditions.
+An alternative idea to estimate these distributions is using Efrons empirical bootstrap. The idea behind this method is to repeatedly draw samples with replacement from the full data according to the empirical distribution function of the data. Through the repeated calculation of the statistic of interest one can get an estimate of its distribution. For the SVM this estimate has been shown to be consistent under relatively mild conditions. 
+\subsection{Goal} 
+The goal of this project is to apply the bootstrap method to the SVM algorithm to estimate the uncertainty of its predictions and the way in which this uncertainty is correlated with other aspects of the SVM (in particular the number of support vectors). This will be done using both simulated as well as real datasets. On simulated datasets the resulting confidence intervals can be compared to known actual values, according to the distribution used for simulation, whereas in the case of real data it will be compared to asymptotic results.
+The project will be implemented in Python using the Liblinear-Algorithm for training individual SVMs, and applying this algorithm to different Bootstrap samples in a parallelized manner.
+The results will be summarized in a short paper. 
+
+\section{Agenda}
+\subsection{Overview}
+
+\begin{enumerate}
+\item  \textbf{Parallel SVM Training on Bootstrap Samples} 
+	\begin{description}[align=left]
+	\item [Time budget:] 40h
+	\item [Time frame:] 11.05 - 07.06.
+	\item [Content:] In this work package we will implement python code that will draw random samples of full size with replacement from our data and train an SVM on each of these samples. The training of SVMs will be parallelized (not each individual SVM though) to speed up the process. 
+	\end{description}
+	
+\item  \textbf{Calculation of Bootstrap Confidence Intervals} 
+	\begin{description}[align=left]
+	\item [Time budget:] 50h
+	\item [Time frame:] 21.05 - 10.06.
+	\item [Content:] Here we will develop code that will generate confidence intervals and variance measures based on the individual SVMs generated in Work Package 1
+	\end{description}
+	
+\item  \textbf{Simulation Study} 
+	\begin{description}[align=left]
+	\item [Time budget:] 60h
+	\item [Time frame:] 28.05. - 20.06.
+	\item [Content:] In this section first we will design code that generates input variables and labels from a known distribution. Here we will ensure that the input variables vary in their influence on the outcome variable and are distributed so that it is fairly straightforward to determine the true distribution of the SVM. Afterwards we will apply our results from phase 1 and 2 to estimate the distribution and compare the estimate to the true distribution.
+	\end{description}
+
+\item  \textbf{Empirical Study} 
+	\begin{description}[align=left]
+	\item [Time budget:] 30h
+	\item [Time frame:] 28.05. - 20.06.
+	\item [Content:] This work package is somewhat similar to work package 3 with the difference that here we will use a real dataset. Here a significant challenge will lie in identifying a suitable dataset, since we will need data with a at least asymptotically known distribution. Also we will restrict our choice of data to applications where SVMs have high predictive performance.
+	\end{description}
+\pagebreak
+\item  \textbf{Report} 
+	\begin{description}[align=left]
+	\item [Time budget:] 15h
+	\item [Time frame:] 20.06. - 30.06.
+	\item [Content:] In this final work package we will illustrate the procedure we used in phase 1-4 and summarize our results from the simulation and empirical study.
+	\end{description}
+\end{enumerate}
+
+
+
+\end{document}
