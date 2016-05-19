@@ -1,0 +1,44 @@
+\begin{thebibliography}{1}
+
+\bibitem{christmann_bootstrap_2013}
+Andreas Christmann and Robert Hable.
+\newblock On the bootstrap approach for support vector machines and related
+  kernel based methods.
+\newblock In {\em Proceedings 59th {ISI} {World} {Statistics} {Congress},,
+  {Hong} {Kong}. {Session} {CPS}018}, 2013.
+
+\bibitem{christmann_qualitative_2013}
+Andreas Christmann, Matías Salibián-Barrera, and Stefan Van~Aelst.
+\newblock Qualitative robustness of bootstrap approximations for kernel based
+  methods.
+\newblock In {\em Robustness and {Complex} {Data} {Structures}}, pages
+  263--278. Springer, 2013.
+
+\bibitem{cristianini_introduction_2000}
+Nello Cristianini and John Shawe-Taylor.
+\newblock {\em An introduction to support vector machines and other
+  kernel-based learning methods}.
+\newblock Cambridge university press, 2000.
+
+\bibitem{efron_introduction_1994}
+Bradley Efron and Robert~J. Tibshirani.
+\newblock {\em An introduction to the bootstrap}.
+\newblock CRC press, 1994.
+
+\bibitem{fan_liblinear:_2008}
+Rong-En Fan, Kai-Wei Chang, Cho-Jui Hsieh, Xiang-Rui Wang, and Chih-Jen Lin.
+\newblock {LIBLINEAR}: {A} library for large linear classification.
+\newblock {\em The Journal of Machine Learning Research}, 9:1871--1874, 2008.
+
+\bibitem{hastie_elements_2005}
+Trevor Hastie, Robert Tibshirani, Jerome Friedman, and James Franklin.
+\newblock The elements of statistical learning: data mining, inference and
+  prediction.
+\newblock {\em The Mathematical Intelligencer}, 27(2):83--85, 2005.
+
+\bibitem{steinwart_support_2008}
+Ingo Steinwart and Andreas Christmann.
+\newblock {\em Support vector machines}.
+\newblock Springer Science \& Business Media, 2008.
+
+\end{thebibliography}

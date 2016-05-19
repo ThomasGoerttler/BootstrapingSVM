@@ -65,6 +65,8 @@
 
 \date{\normalsize\today} % Today's date or a custom date
 
+
+
 \begin{document}
 
 \maketitle % Print the title
@@ -90,7 +92,7 @@ The results will be summarized in a short paper.
 	\begin{description}[align=left]
 	\item [Time budget:] 40h
 	\item [Time frame:] 11.05 - 07.06.
-	\item [Content:] In this work package we will implement python code that will draw random samples of full size with replacement from our data and train an SVM on each of these samples. The training of SVMs will be parallelized (not each individual SVM though) to speed up the process. 
+	\item [Content:] In this work package we will implement python code that will draw random samples of full size with replacement from our data and train an SVM on each of these samples. The training of SVMs will be parallelized (not each individual SVM though) to speed up the process. The optimal tuning parameters will be determined using Cross Validation.
 	\end{description}
 	
 \item  \textbf{Calculation of Bootstrap Confidence Intervals} 
@@ -104,14 +106,14 @@ The results will be summarized in a short paper.
 	\begin{description}[align=left]
 	\item [Time budget:] 60h
 	\item [Time frame:] 28.05. - 20.06.
-	\item [Content:] In this section first we will design code that generates input variables and labels from a known distribution. Here we will ensure that the input variables vary in their influence on the outcome variable and are distributed so that it is fairly straightforward to determine the true distribution of the SVM. Afterwards we will apply our results from phase 1 and 2 to estimate the distribution and compare the estimate to the true distribution.
+	\item [Content:] In this section first we will design code that generates input variables and labels from a known distribution. Here we will ensure that the input variables vary in their influence on the outcome variable and are distributed so that it is fairly straightforward to determine the true distribution of the SVM. Afterwards we will apply our results from phase 1 and 2 to estimate the distribution and compare the estimate to the true distribution. Here we would also analyse the relationship between the number of support vectors and the variance. 
 	\end{description}
 
 \item  \textbf{Empirical Study} 
 	\begin{description}[align=left]
 	\item [Time budget:] 30h
 	\item [Time frame:] 28.05. - 20.06.
-	\item [Content:] This work package is somewhat similar to work package 3 with the difference that here we will use a real dataset. Here a significant challenge will lie in identifying a suitable dataset, since we will need data with a at least asymptotically known distribution. Also we will restrict our choice of data to applications where SVMs have high predictive performance.
+	\item [Content:] This work package is somewhat similar to work package 3 with the difference that here we will use a real dataset. Here a significant challenge will lie in identifying a suitable dataset, since we will need data with a at least asymptotically known distribution. Also we will restrict our choice of data to applications where SVMs have high predictive performance. Both work packages 2 and 3 will incorporate SVMs based on linear as well as Gaussian RBF Kernels. 
 	\end{description}
 \pagebreak
 \item  \textbf{Report} 
@@ -123,5 +125,13 @@ The results will be summarized in a short paper.
 \end{enumerate}
 
 
+
+\section{Literature}
+In the following we give a short list of the literature that we have found  helpful so far and which forms the basis of our current understanding of the topic. This is not a complete list of the literature that we are planning to use.
+
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{/Users/Christian/Statistik_Studium/Machinelearning/Projekt/BootstrapingSVM/Projektskizze/ProjektskizzeLiteratur.bib}
 
 \end{document}
