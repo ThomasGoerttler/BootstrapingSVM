@@ -1,1 +1,1 @@
-python main.py heart_scale.txt
+python3 main.py heart_scale.txt
