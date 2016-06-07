@@ -13,7 +13,7 @@ def standard_deviation(array):
     variance = mean(array)
     return(math.sqrt(variance))
 
-def calculateConfidenceIntervalls(results):
+def calculate_confidence_intervalls(results):
 
     accuracies = []
     for i in range(len(results)):
