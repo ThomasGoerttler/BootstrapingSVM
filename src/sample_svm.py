@@ -1,6 +1,5 @@
 import random
-from liblinearutil import *
-from numpy import *
+from sklearn import svm
 
 def random_sample_with_replacement(population, sample_size):
     "Chooses k random elements (with replacement) from a population"
@@ -15,15 +14,25 @@ def random_sample_with_replacement_of_dataset(data, sample_size):
         x = [x[i] for i in sorted_list]
         return(y, x)
 
-def single_sample_and_svn(training_data):
+
+def single_sample_and_svm(training_data):
+    "New version of using skilearn"
     
-    # To be refecatored
     prediction_data = training_data
     
-    y, x = random_sample_with_replacement_of_dataset(training_data, len(training_data[0]))
-    model = train(y, x, '-c 4')
+    y, X = random_sample_with_replacement_of_dataset(training_data, len(training_data[0]))
+
+    clf = svm.SVC()
+    fit = clf.fit(X, y)  
     
-    y, x = prediction_data
-    p_label, p_acc, p_val = predict(y, x, model)
+    y_pred, X_pred = prediction_data
     
-    return(p_acc)
+    probabilities = clf.decision_function(X_pred)
+    
+    print(probabilities)
+    
+    return(probabilities)
+    
+    
+    
+    
