@@ -1,5 +1,6 @@
 import random
 from liblinearutil import *
+from numpy import *
 
 def random_sample_with_replacement(population, sample_size):
     "Chooses k random elements (with replacement) from a population"

@@ -1,7 +1,6 @@
 import math
 import statistics
 
-
 def calculate_confidence_intervalls(results):
 
     accuracies = []
