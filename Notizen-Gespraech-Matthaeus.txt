@@ -1,0 +1,9 @@
+Fragen an Matthäus:
+
+1. Was Bootstrappen wir ? Reelwertige Zufallsvariable ? Predictions
+	- Scores auf Test-Samples
+	
+2. Zusammenhang #Support Vectoren und Varianz, für jede Anzahl nur eine SVM ?
+	- Anzahl der Support Vectoren der urpsrünglichen SVM
+
+3. Madelon Datensatz
