@@ -18,6 +18,6 @@ def calculate_variance_of_svm(results):
     for index in range(len(distribution_of_points)):
         std = statistics.stdev(distribution_of_points[index])
         standard_deviations[index] = std
-        print(std)
+        print(index, ": ", std)
         
     return(statistics.mean(standard_deviations))

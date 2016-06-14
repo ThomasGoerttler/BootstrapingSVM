@@ -25,11 +25,14 @@ if __name__ == '__main__':
     
     ### Do bootstrapping
     PROCESSES = 10
-    REPLICATIONS = 3 #1000
+    REPLICATIONS = 1000
     pool = Pool(processes = PROCESSES)
     results = pool.map(single_sample_and_svm, [data] * REPLICATIONS)
     
+    
     ### Calculate the Variance of the Support Vector Machine
+    
+    results = list(zip(*results))
     
     variance_of_svm_probabilites = calculate_variance_of_svm(results[0])
     variance_of_svm_distance_to_hyperplane = calculate_variance_of_svm(results[1])
