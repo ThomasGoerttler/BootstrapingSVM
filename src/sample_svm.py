@@ -15,23 +15,23 @@ def random_sample_with_replacement_of_dataset(data, sample_size):
         return(y, x)
 
 
-def single_sample_and_svm(training_data):
+def single_sample_and_svm(input_data):
     "New version of using skilearn"
     
-    prediction_data = training_data
-    
+    training_data, prediction_data = input_data
     y, X = random_sample_with_replacement_of_dataset(training_data, len(training_data[0]))
-
-    clf = svm.SVC()
+    clf = svm.SVC(probability = True)
     fit = clf.fit(X, y)  
     
-    y_pred, X_pred = prediction_data
+    distance_to_hyperplane = clf.decision_function(prediction_data[1])
+    probabilities = clf.predict_proba(prediction_data[1])
+    probabilities = list(zip(*probabilities))
+    probabilities = probabilities[1]
     
-    probabilities = clf.decision_function(X_pred)
-    
+    print(distance_to_hyperplane)
     print(probabilities)
     
-    return(probabilities)
+    return([probabilities,distance_to_hyperplane])
     
     
     
