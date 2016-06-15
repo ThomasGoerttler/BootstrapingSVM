@@ -1,5 +1,6 @@
 import random
 from sklearn import svm
+from models import *
 
 def random_sample_with_replacement(population, sample_size):
     "Chooses k random elements (with replacement) from a population"
@@ -20,7 +21,7 @@ def single_sample_and_svm(input_data):
     
     training_data, prediction_data = input_data
     y, X = random_sample_with_replacement_of_dataset(training_data, len(training_data[0]))
-    clf = svm.SVC(probability = True)
+    clf = svm.SVC(probability = True, kernel='rbf')
     fit = clf.fit(X, y)  
     
     distance_to_hyperplane = clf.decision_function(prediction_data[1])
@@ -31,7 +32,9 @@ def single_sample_and_svm(input_data):
     print(distance_to_hyperplane)
     print(probabilities)
     
-    return([probabilities,distance_to_hyperplane])
+    result = SVM_Result(probabilities,distance_to_hyperplane)
+    
+    return(result)
     
     
     
