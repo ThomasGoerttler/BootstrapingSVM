@@ -42,8 +42,9 @@ if __name__ == '__main__':
     data = [trainings_data, prediction_data]
     
     kernel = 'linear'
+    C = 100
     
-    data = SVM_Input(trainings_data, prediction_data, kernel = kernel, C = 1000)
+    data = SVM_Input(trainings_data, prediction_data, kernel = kernel, C = C)
     
     real_result = do_svm(data)
     
@@ -79,4 +80,7 @@ if __name__ == '__main__':
     
     print("Accurancy")
     print(real_result.score)
+    
+    print("The C Factor")
+    print(C)
     
