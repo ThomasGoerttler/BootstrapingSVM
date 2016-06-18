@@ -3,6 +3,7 @@ from sklearn import svm
 from models import *
 import matplotlib.pyplot as plt
 from numpy import *
+import datetime
 
 def random_sample_with_replacement(population, sample_size):
     "Chooses k random elements (with replacement) from a population"
@@ -26,6 +27,10 @@ def single_sample_and_svm(input_data):
     training_data = input_data.training_data
     prediction_data = input_data.prediction_data
     kernel = input_data.kernel
+    
+    # Set seed for each Thread new as otherwise each process starts with same Seed -> ugly
+    SEED = datetime.datetime.now().time().microsecond
+    random.seed(SEED)
     
     y, X = random_sample_with_replacement_of_dataset(training_data, len(training_data[0]))
     
