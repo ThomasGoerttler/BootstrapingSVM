@@ -1,9 +1,12 @@
 class SVM_Result:
     
-    def __init__(self, probability, distance):
+    def __init__(self, probability, distance, yy, n_support):
         self.current = 0
         self.probability = probability
         self.distance = distance
+        self.line = yy
+        self.n_support = n_support
+        
         
     # Definitons to satisfy the iterable protocoll
         
@@ -33,3 +36,13 @@ class Points_Information:
         
         self.probabilites = list(zip(*probabilites_for_each_svm))
         self.distances = list(zip(*distances_for_each_svm))
+        
+        
+class SVM_Input:
+    
+    def __init__(self, training_data, prediciton_data, kernel, C):
+        self.training_data = training_data
+        self.prediction_data = prediciton_data
+        self.kernel = kernel
+        self.C = C
+    
