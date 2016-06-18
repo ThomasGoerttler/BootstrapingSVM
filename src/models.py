@@ -1,11 +1,12 @@
 class SVM_Result:
     
-    def __init__(self, probability, distance, yy, n_support):
+    def __init__(self, probability, distance, yy, n_support, score):
         self.current = 0
         self.probability = probability
         self.distance = distance
         self.line = yy
         self.n_support = n_support
+        self.score = score
         
         
     # Definitons to satisfy the iterable protocoll

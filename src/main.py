@@ -10,23 +10,10 @@ import math
 
 if __name__ == '__main__':
     
-    ### Prepare Data
-    #filename = sys.argv[1]
-    #print(filename)
-    #data = load_data(filename)
-    
-    ### Simulation of the Data
-    X = [[0, 0], [0, 1], [0, 0.5], [0, 1.5], [0, 12], [0, 13], [0, 0.25], [0, 12.5], [1, 1], [1, 0], [1, 1.5], [1, 0.5], [1, 11], [1, 2], [1, 13.5], [1, 0.52]]
-    y = [-1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1]
-    trainings_data = [y, X]
-    
-    X = [[0, 0], [0, 1], [0, 0.5], [0, 1.5], [0, 12], [0, 13], [0, 0.25], [0, 12.5], [1, 1], [1, 0], [1, 1.5], [1, 0.5], [1, 11], [1, 2], [1, 13.5], [1, 0.52]]
-    y = [-1, -1, -1, -1, -1, -1, -1, -1, 1, 1, 1, 1, 1, 1, 1, 1]
-    prediction_data = [y, X]
-    
+
     ## simple 
     
-    N = 1000
+    N = 100
     
     x1 = random.sample(N) 
     x2 = random.sample(N) 
@@ -34,19 +21,17 @@ if __name__ == '__main__':
     xx = linspace(-0.1, 1.1)
     yy = xx
     
-    y = ((x1 > x2) * 2) - 1 
     
     y =  x1 - x2 
     adding = random.normal(0,0.5,N)
-    
+     
     y = y + adding
     y = sign(y)
     
     
     plt.scatter(x1,x2, c=y)
-    #plt.plot(xx, yy, '-k')
-    #plt.show()
     
+    ## REALLY INPORTANT
     
     X = list(zip(*[x1,x2]))
     
@@ -58,7 +43,9 @@ if __name__ == '__main__':
     
     kernel = 'linear'
     
-    data = SVM_Input(trainings_data, prediction_data, kernel = kernel, C = 1)
+    data = SVM_Input(trainings_data, prediction_data, kernel = kernel, C = 1000)
+    
+    real_result = do_svm(data)
     
     ### Do bootstrapping
     PROCESSES = 1
@@ -71,7 +58,6 @@ if __name__ == '__main__':
         
         for i in range(len(yy)) :
             plt.plot(xx, results[i].line, '-k')
-            print(results[i].n_support)
         plt.show()
     
     
@@ -87,4 +73,10 @@ if __name__ == '__main__':
     
     print("Variance of SVM distance to hyperplane")
     print(variance_of_svm_distance_to_hyperplane)
+    
+    print("Number of Support Vectors")
+    print(real_result.n_support)
+    
+    print("Accurancy")
+    print(real_result.score)
     
