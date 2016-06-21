@@ -35,7 +35,7 @@ def do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma = "auto", deg
     variance_of_svm_probabilites = calculate_variance_of_svm(points_information.probabilites)
     variance_of_svm_distance_to_hyperplane = calculate_variance_of_svm(points_information.distances)
         
-    return([real_svm[0], real_svm[1], variance_of_svm_probabilites, variance_of_svm_distance_to_hyperplane])
+    return([real_svm[0], real_svm[1], real_svm[2], variance_of_svm_probabilites, variance_of_svm_distance_to_hyperplane])
     
     
 def random_sample_with_replacement(population, sample_size):
@@ -96,9 +96,12 @@ def do_svm(input_parameters):
     
     
     score = clf.score(prediction_data[1],prediction_data[0])
+    prediction = clf.predict(prediction_data[1])
     
+    y_count_1 = (y.size + sum(y)) / 2
+    prediction_count_1 = (prediction.size + sum(prediction)) / 2
     
-    return(clf, score)
+    return(clf, score, [[y_count_1, y.size-y_count_1], [prediction_count_1, prediction.size-prediction_count_1]])
     
 
 def calculate_variance_of_svm(results):
