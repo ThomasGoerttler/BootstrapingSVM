@@ -13,9 +13,9 @@ Degree = 1
 
 
 
-trainingsdata = dataSimulation([.5,.25,.25],1,N)
+trainingsdata = dataSimulation([.5,.25,.25],1, 1,N)
 
-testdata = dataSimulation([.5,.25,.25],1,N)
+testdata = dataSimulation([.5,.25,.25],1, 1, N)
 
 
 CValues = list(arange(0.1,2,0.1))

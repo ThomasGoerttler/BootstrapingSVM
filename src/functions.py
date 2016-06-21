@@ -117,15 +117,15 @@ def calculate_variance_of_svm(results):
 def invert(matrix):
     return(list(zip(*matrix)))
 
-def dataSimulation(coefs, errorCoef, size):
+def dataSimulation(coefs, errorCoef, intercept, size):
 	inputs = []
 	error = errorCoef*rd.standard_normal(size)
-	y = error
+	y = error + intercept
 	for i in range(len(coefs)):
 		 inputs = inputs + [rd.standard_normal(size)]		 
 		 y = y+coefs[i]*inputs[i]
 	y = sign(y)
-	inputs = list(zip(*inputs))
+	inputs = invert(inputs)
 	return([y,inputs])
 	
 	
