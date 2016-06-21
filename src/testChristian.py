@@ -12,23 +12,10 @@ replications = 50
 Degree = 1
 
 
-x1 = random.standard_normal(N)
-x2 = random.standard_normal(N)
-x3 = random.standard_normal(N)
-y = 0.5*x1+0.25*x2+0.25*x3 + random.standard_normal(N)
-y = sign(y)
 
-X = list(zip(*[x1,x2,x3]))
-trainingsdata = [y,X]
+trainingsdata = dataSimulation([.5,.25,.25],1,N)
 
-x1 = random.standard_normal(N)
-x2 = random.standard_normal(N)
-x3 = random.standard_normal(N)
-y = 0.5*x1+0.25*x2+0.25*x3 + random.standard_normal(N)
-y = sign(y)
-
-X = list(zip(*[x1,x2,x3]))
-testdata = [y,X]
+testdata = dataSimulation([.5,.25,.25],1,N)
 
 
 CValues = list(arange(0.1,2,0.1))

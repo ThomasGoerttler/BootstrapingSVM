@@ -3,13 +3,14 @@ import sys
 
 from multiprocessing import Process, Pool
 from numpy import *
+from numpy import random as rd
 from sklearn import svm
 from models import *
 
 import matplotlib.pyplot as plt
 import math
-import statistics
 import random
+import statistics
 import datetime
 
 
@@ -115,3 +116,17 @@ def calculate_variance_of_svm(results):
     
 def invert(matrix):
     return(list(zip(*matrix)))
+
+def dataSimulation(coefs, errorCoef, size):
+	inputs = []
+	error = errorCoef*rd.standard_normal(size)
+	y = error
+	for i in range(len(coefs)):
+		 inputs = inputs + [rd.standard_normal(size)]		 
+		 y = y+coefs[i]*inputs[i]
+	y = sign(y)
+	inputs = list(zip(*inputs))
+	return([y,inputs])
+	
+	
+	
