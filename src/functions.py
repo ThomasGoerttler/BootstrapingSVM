@@ -97,6 +97,7 @@ def do_svm(input_parameters):
     
     score = clf.score(prediction_data[1],prediction_data[0])
     prediction = clf.predict(prediction_data[1])
+    y = prediction_data[0]
     
     y_count_1 = (y.size + sum(y)) / 2
     prediction_count_1 = (prediction.size + sum(prediction)) / 2
