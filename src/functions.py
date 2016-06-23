@@ -6,13 +6,13 @@ from numpy import *
 from numpy import random as rd
 from sklearn import svm
 from models import *
+from scipy.spatial.distance import pdist, squareform
 
 import matplotlib.pyplot as plt
 import math
 import random
 import statistics
 import datetime
-
 
 def do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma = "auto", degree = 3, processes = 1, replications = 10):
 
@@ -129,8 +129,34 @@ def dataSimulation(coefs, errorCoef, intercept, size):
 		 inputs = inputs + [rd.standard_normal(size)]		 
 		 y = y+coefs[i]*inputs[i]
 	y = sign(y)
-	inputs = invert(inputs)
+	inputs = list(zip(*inputs))
 	return([y,inputs])
-	
+
+
+#Funktion zur Simulierung von Daten mit y wert abhaengig vom Abstand von Zentren
+def centroidSimulation(coefs, locations, errorCoef, size, intercept, distance, xdistribution = "normal", par1 = 0, par2 = 1):
+	X = []
+	dimension = len(list(zip(*locations)))
+	for i in range(dimension):
+		if(xdistribution == "normal"):		
+			X = X + [rd.normal(par1, par2, size)]
+		elif(xdistribution == "uniform"):
+			X = X + [rd.uniform(par1, par2, size)]
+		else:
+			print("Please choose supported Distribution")
+			return None	
+	X = list(zip(*X))
+	distances = []
+	error = errorCoef*rd.standard_normal(size)
+	y = error + intercept
+	for i in range(size):	
+		newDistance = pdist([X[i]]+locations, distance)
+		newDistance = newDistance[:len(locations)]
+		inverseDistance = power(newDistance, -1)
+		y[i] = y[i] + dot(coefs, inverseDistance)
+		distances = distances + [newDistance]
+	y = sign(y)
+	#distances = list(zip(*distances))
+	return([y,X])	
 	
 	
