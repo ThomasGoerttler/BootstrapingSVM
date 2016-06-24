@@ -14,6 +14,12 @@ import random
 import statistics
 import datetime
 
+
+def bootstrap_the_svm(trainings_data, prediction_data, kernel, C, gamma, degree, processes, replications):
+    result = do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma, degree, processes, replications)
+    res = Bootstrap_Result(result[0], result[1], result[2], result[3], result[4], result[0].n_support_ )
+    return(res)
+
 def do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma = "auto", degree = 3, processes = 1, replications = 10):
 
     
@@ -118,8 +124,15 @@ def calculate_variance_of_svm(results):
     return(statistics.mean(standard_deviations))
     
     
-def invert(matrix):
+def transpose(matrix):
     return(list(zip(*matrix)))
+    
+def sort_multiple_array(x, y):
+    multiple = [x,y]
+    multiple = transpose(multiple)
+    multiple = sorted(multiple)
+    multiple = transpose(multiple)
+    return multiple
 
 def dataSimulation(coefs, errorCoef, intercept, size):
 	inputs = []
@@ -132,6 +145,17 @@ def dataSimulation(coefs, errorCoef, intercept, size):
 	inputs = list(zip(*inputs))
 	return([y,inputs])
 
+def get_time_stamp():
+    return(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
+
+def create_text_file(name, X, Y):
+    # Save data to csv
+    txt = open(name + '.txt', 'w+')
+    txt.write(" ".join(str(x) for x in X))
+    txt.write("\n")
+    txt.write(" ".join(str(x) for x in Y))
+    txt.closed
+    print("File", name + '.txt', "has been created.")
 
 #Funktion zur Simulierung von Daten mit y wert abhaengig vom Abstand von Zentren
 def centroidSimulation(coefs, locations, errorCoef, size, intercept, distance, xdistribution = "normal", par1 = 0, par2 = 1):

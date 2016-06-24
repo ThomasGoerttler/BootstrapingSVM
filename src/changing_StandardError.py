@@ -1,7 +1,6 @@
 import os
 import sys
 from functions import *
-from new_Models_and_Function import *
 from numpy import *
 import math
 import matplotlib.pyplot as plt
@@ -9,73 +8,61 @@ import matplotlib.pyplot as plt
 if __name__ == '__main__':
     
 
-    ## SIMULATION OF DATA
+    ### 1. Part: SIMULATION OF DATA
     
+    # Seed
     random.seed(1109992)
     
-    
-    N = 1000    
+    # Parameters
+    n = 100
     C = 1
     processes = 10
-    replications = 100
+    replications = 10
+    kernel = 'linear'
+    ### important if you want to know in the filename which distribution the data hase
+    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)'
     
-    ## CALCULATION
+    ### 2. Part: CALCULATION
     
-    graph_x = list()
-    graph_y_prob = list()
-    graph_y_dist = list()
-    graph_x_support = list()
+    # values being plotted
+    n_support_vectors = list()
+    variances = list()
     
     for i in range(20):
         
+        # Set error dynamically
         error = (i+1) / 10
         
-        trainings_data = dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, N)
-        prediction_data = dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, N)
+        # generate data
+        trainings_data = dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)
+        prediction_data = dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)
         
-        result = do_Boot(trainings_data, prediction_data, "linear", C, "auto", 1, processes, replications)
-        result.view()
-        print(i)
-        graph_x.append(result.accuracy)
-        graph_y_prob.append(result.var_probability)
-        graph_y_dist.append(result.var_distance)
+        # do Bootstrap
+        result = bootstrap_the_svm(trainings_data, prediction_data, kernel, C, "auto", 1, processes, replications)
+
+        # Print outs the result
+        print("Iteration:", i)
+        result.view() 
         
-        graph_x_support.append(result.n_support[0]+result.n_support[1])
+        # add values to the lists
+        n_support_vectors.append(result.accuracy)
+        variances.append(result.var_distance)
+
         
-        
-    ## PLOTTING
-    def my_invert(matrix):
-        return(list(zip(*matrix)))
+    ### 3. Part: PLOTTING
     
-    ## to sort
-    multiple = [graph_x,graph_y_prob,graph_y_dist]
-    multiple = my_invert(multiple)
-    multiple = sorted(multiple)
-    multiple = my_invert(multiple)
-    graph_x,graph_y_prob,graph_y_dist = multiple
-    ## end sort
-        
-    plt.plot(graph_x, graph_y_prob, c = 'black')
-    plt.scatter(graph_x, graph_y_prob, c = 'black')
-    plt.plot(graph_x, graph_y_dist, c = 'green')
-    plt.scatter(graph_x, graph_y_dist, c = 'green')
-    plt.show()
+    # Sort array
+    n_support_vectors, variances = sort_multiple_array(n_support_vectors, variances)
     
+    # Do the plotting
+    plt.plot(n_support_vectors, variances, c = 'green')
+    plt.scatter(n_support_vectors, variances, c = 'green')
+    plt.xlabel('Number of support vectors')
+    plt.ylabel('Variance of distances')
+
+    # Save the plot
+    filename = 'output/change_Support_Vectors_' + get_time_stamp() + '_n=' + str(n) + '_replication=' + str(replications) + '_C=' + str(C) + '_kernel=' + kernel + '_data= ' + simulation_function
+    plt.savefig(filename + '.png')
+    print("File", filename + '.png', "has been created.")
     
-    ### Seond time with support vectors
-    
-    ## to sort
-    multiple = [graph_x_support,graph_y_prob,graph_y_dist]
-    multiple = my_invert(multiple)
-    multiple = sorted(multiple)
-    multiple = my_invert(multiple)
-    graph_x,graph_y_prob,graph_y_dist = multiple
-    ## end sort
-        
-    plt.plot(graph_x, graph_y_prob, c = 'black')
-    plt.scatter(graph_x, graph_y_prob, c = 'black')
-    plt.plot(graph_x, graph_y_dist, c = 'green')
-    plt.scatter(graph_x, graph_y_dist, c = 'green')
-    plt.show()
-    
-    
+    create_text_file(filename, n_support_vectors, variances)
