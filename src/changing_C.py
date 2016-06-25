@@ -18,7 +18,7 @@ if __name__ == '__main__':
     processes = 1
     replications = 1000
     number_of_datasets = 10
-    kernel = 'linear'
+    kernel = 'rbf'
     ### important if you want to know in the filename which distribution the data hase
     simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], 1, 0, n)'
     

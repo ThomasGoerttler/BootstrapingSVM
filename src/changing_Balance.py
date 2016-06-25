@@ -5,7 +5,17 @@ from numpy import *
 import math
 import matplotlib.pyplot as plt
 
+def do_quadratic_regression(x, y, x_start, x_end):
+    x = array(x)
+    y = array(y)
+    x2 = x * x
+    X = array([ones(len(x)), x, x2])
+    coefficients = linalg.lstsq(X.T,y)[0]
     
+    xx = linspace(x_start, x_end)
+    yy = coefficients[0] + coefficients[1] * xx + coefficients[2] * (xx * xx)
+    plt.plot(xx, yy, '-k', color = "green")    
+
 if __name__ == '__main__':
     
     ### 1. Part: SIMULATION OF DATA
@@ -17,8 +27,8 @@ if __name__ == '__main__':
     n = 500
     C = 1
     processes = 10
-    replications = 200
-    kernel = 'linear'
+    replications = 100
+    kernel = 'rbf'
     ### important if you want to know in the filename which distribution the data hase
     simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], 1, intercept, n)'
     
@@ -55,6 +65,7 @@ if __name__ == '__main__':
     
     # Do the plotting
     #plt.plot(balances, variances, c = 'green')
+    do_quadratic_regression(balances, variances, 0, 1)
     plt.scatter(balances, variances, c = 'green')
     plt.xlabel('Balances')
     plt.ylabel('Variance of distances')
@@ -65,3 +76,5 @@ if __name__ == '__main__':
     print("File", filename + '.png', "has been created.")
     
     create_text_file(filename, balances, variances)
+    
+

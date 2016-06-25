@@ -5,6 +5,17 @@ from numpy import *
 import math
 import matplotlib.pyplot as plt
 
+def do_quadratic_regression(x, y, x_start, x_end):
+    x = array(x)
+    y = array(y)
+    x2 = x * x
+    X = array([ones(len(x)), x, x2])
+    coefficients = linalg.lstsq(X.T,y)[0]
+    
+    xx = linspace(x_start, x_end)
+    yy = coefficients[0] + coefficients[1] * xx + coefficients[2] * (xx * xx)
+    plt.plot(xx, yy, '-k', color = "green")    
+
 if __name__ == '__main__':
     
 
@@ -18,7 +29,7 @@ if __name__ == '__main__':
     C = 1
     processes = 10
     replications = 100
-    kernel = 'linear'
+    kernel = 'rbf'
     ### important if you want to know in the filename which distribution the data hase
     simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)'
     
@@ -45,7 +56,7 @@ if __name__ == '__main__':
         result.view() 
         
         # add values to the lists
-        n_support_vectors.append(result.accuracy)
+        n_support_vectors.append(result.n_support[0] + result.n_support[1])
         variances.append(result.var_distance)
 
         
@@ -56,6 +67,7 @@ if __name__ == '__main__':
     
     # Do the plotting
     #plt.plot(n_support_vectors, variances, c = 'green')
+    do_quadratic_regression(n_support_vectors, variances, 0, n)
     plt.scatter(n_support_vectors, variances, c = 'green')
     plt.xlabel('Number of support vectors')
     plt.ylabel('Variance of distances')
