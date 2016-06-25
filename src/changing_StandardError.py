@@ -14,10 +14,10 @@ if __name__ == '__main__':
     random.seed(1109992)
     
     # Parameters
-    n = 100
+    n = 1000
     C = 1
     processes = 10
-    replications = 10
+    replications = 100
     kernel = 'linear'
     ### important if you want to know in the filename which distribution the data hase
     simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)'
@@ -28,10 +28,10 @@ if __name__ == '__main__':
     n_support_vectors = list()
     variances = list()
     
-    for i in range(20):
+    for i in range(40):
         
         # Set error dynamically
-        error = (i+1) / 10
+        error = (i+1) / 20
         
         # generate data
         trainings_data = dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     n_support_vectors, variances = sort_multiple_array(n_support_vectors, variances)
     
     # Do the plotting
-    plt.plot(n_support_vectors, variances, c = 'green')
+    #plt.plot(n_support_vectors, variances, c = 'green')
     plt.scatter(n_support_vectors, variances, c = 'green')
     plt.xlabel('Number of support vectors')
     plt.ylabel('Variance of distances')

@@ -14,10 +14,10 @@ if __name__ == '__main__':
     random.seed(1109992)
     
     # Parameters
-    n = 100
+    n = 500
     C = 1
     processes = 10
-    replications = 10
+    replications = 200
     kernel = 'linear'
     ### important if you want to know in the filename which distribution the data hase
     simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], 1, intercept, n)'
@@ -28,10 +28,10 @@ if __name__ == '__main__':
     balances = list()
     variances = list()
     
-    for i in range(20):
+    for i in range(52):
         
         # Set intercept dynamically
-        intercept = (i+1) / 10
+        intercept = ((i+1) / 13) - 2
         
         # generate data
         trainings_data = dataSimulation([0.8, 0.7, 0.9, -0.3], 1, intercept, n)
@@ -54,7 +54,7 @@ if __name__ == '__main__':
     balances, variances = sort_multiple_array(balances, variances)
     
     # Do the plotting
-    plt.plot(balances, variances, c = 'green')
+    #plt.plot(balances, variances, c = 'green')
     plt.scatter(balances, variances, c = 'green')
     plt.xlabel('Balances')
     plt.ylabel('Variance of distances')
