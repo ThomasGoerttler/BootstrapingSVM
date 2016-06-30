@@ -20,7 +20,7 @@ if __name__ == '__main__':
     number_of_datasets = 10
     kernel = 'rbf'
     ### important if you want to know in the filename which distribution the data hase
-    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], 1, 0, n)'
+    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3, -0.7, 0.8, 12], 1, 0, n)'
     
     # List of Datasets
     trainings_data = list()
@@ -50,7 +50,7 @@ if __name__ == '__main__':
             # do Bootstrap
             result = bootstrap_the_svm(trainings_data[j], prediction_data[j], kernel, C, "auto", 1, processes, replications)
             # print the result
-            #result.view() 
+            result.view() 
             print("Iteration", i, ".", j)
             # add variance to list
             variances_for_this_iteraction.append(result.var_distance)

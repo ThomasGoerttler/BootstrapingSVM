@@ -28,10 +28,10 @@ if __name__ == '__main__':
     n = 1000
     C = 1
     processes = 10
-    replications = 100
-    kernel = 'rbf'
+    replications = 500
+    kernel = 'linear'
     ### important if you want to know in the filename which distribution the data hase
-    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], error, 0, n)'
+    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3, -0.7, 0.8, 12], 1, 0, n)'
     
     ### 2. Part: CALCULATION
     
