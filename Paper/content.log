@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  1 JUL 2016 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  4 JUL 2016 10:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -284,8 +284,6 @@ LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <8> on input line 81.
 LaTeX Font Info:    External font `cmex10' loaded for size
 (Font)              <6> on input line 81.
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¤ in font ptmr7t!
 
 Overfull \vbox (6.16972pt too high) detected at line 81
  []
@@ -293,116 +291,71 @@ Overfull \vbox (6.16972pt too high) detected at line 81
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 87.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
 <abb/distances.jpg, id=1, 718.685pt x 438.63875pt>
 File: abb/distances.jpg Graphic file (type jpg)
  <use abb/distances.jpg>
-Package pdftex.def Info: abb/distances.jpg used on input line 112.
+Package pdftex.def Info: abb/distances.jpg used on input line 108.
 (pdftex.def)             Requested size: 108.405pt x 66.16109pt.
 
 <abb/100_n.jpg, id=3, 578.16pt x 433.62pt>
 File: abb/100_n.jpg Graphic file (type jpg)
  <use abb/100_n.jpg>
-Package pdftex.def Info: abb/100_n.jpg used on input line 120.
+Package pdftex.def Info: abb/100_n.jpg used on input line 116.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/100_y.jpg, id=4, 578.16pt x 433.62pt>
 File: abb/100_y.jpg Graphic file (type jpg)
  <use abb/100_y.jpg>
-Package pdftex.def Info: abb/100_y.jpg used on input line 121.
+Package pdftex.def Info: abb/100_y.jpg used on input line 117.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/1000_n.jpg, id=5, 578.16pt x 433.62pt>
 File: abb/1000_n.jpg Graphic file (type jpg)
  <use abb/1000_n.jpg>
-Package pdftex.def Info: abb/1000_n.jpg used on input line 123.
+Package pdftex.def Info: abb/1000_n.jpg used on input line 119.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/1000_y.jpg, id=6, 578.16pt x 433.62pt>
 File: abb/1000_y.jpg Graphic file (type jpg)
  <use abb/1000_y.jpg>
-Package pdftex.def Info: abb/1000_y.jpg used on input line 124.
+Package pdftex.def Info: abb/1000_y.jpg used on input line 120.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 137.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 133.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (7.40793pt too wide) in paragraph at lines 157--159
+Overfull \hbox (7.40793pt too wide) in paragraph at lines 153--155
 [][][] 
  []
 
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
- <./abb/distances.jpg>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [2 <./abb/100_n.jpg> <./abb/100_y.jpg> <./abb/1000_n.jpg> <./abb/1000_y.jpg>]
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 231.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-
-Package natbib Warning: Citation `Einstein' on page iii undefined on input line
- 233.
-
-<abb/change_C_linear.jpg, id=26, 578.16pt x 433.62pt>
+ <./abb/distances.jpg>] [2 <./abb/100_n.jpg> <./abb/100_y.jpg> <./abb/1000_n.jp
+g> <./abb/1000_y.jpg>] <abb/change_C_linear.jpg, id=31, 578.16pt x 433.62pt>
 File: abb/change_C_linear.jpg Graphic file (type jpg)
 
 <use abb/change_C_linear.jpg>
-Package pdftex.def Info: abb/change_C_linear.jpg used on input line 237.
+Package pdftex.def Info: abb/change_C_linear.jpg used on input line 234.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
-<abb/change_C_rbf.jpg, id=27, 803.0pt x 602.25pt>
+<abb/change_C_rbf.jpg, id=32, 803.0pt x 602.25pt>
 File: abb/change_C_rbf.jpg Graphic file (type jpg)
  <use abb/change_C_rbf.jpg>
-Package pdftex.def Info: abb/change_C_rbf.jpg used on input line 239.
+Package pdftex.def Info: abb/change_C_rbf.jpg used on input line 236.
 (pdftex.def)             Requested size: 108.405pt x 81.30023pt.
 
-[3 <./abb/change_C_linear.jpg> <./abb/change_C_rbf.jpg>]
 <abb/change_Balances_linear.jpg, id=33, 578.16pt x 433.62pt>
 File: abb/change_Balances_linear.jpg Graphic file (type jpg)
 
 <use abb/change_Balances_linear.jpg>
-Package pdftex.def Info: abb/change_Balances_linear.jpg used on input line 253.
+Package pdftex.def Info: abb/change_Balances_linear.jpg used on input line 250.
 
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
@@ -410,7 +363,7 @@ Package pdftex.def Info: abb/change_Balances_linear.jpg used on input line 253.
 File: abb/change_Balances_rbf.jpg Graphic file (type jpg)
 
 <use abb/change_Balances_rbf.jpg>
-Package pdftex.def Info: abb/change_Balances_rbf.jpg used on input line 255.
+Package pdftex.def Info: abb/change_Balances_rbf.jpg used on input line 252.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/change_Support_Vectors_linear.jpg, id=35, 578.16pt x 433.62pt>
@@ -418,7 +371,7 @@ File: abb/change_Support_Vectors_linear.jpg Graphic file (type jpg)
 
 <use abb/change_Support_Vectors_linear.jpg>
 Package pdftex.def Info: abb/change_Support_Vectors_linear.jpg used on input li
-ne 267.
+ne 264.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/change_Support_Vectors_rbf.jpg, id=36, 578.16pt x 433.62pt>
@@ -426,42 +379,48 @@ File: abb/change_Support_Vectors_rbf.jpg Graphic file (type jpg)
 
 <use abb/change_Support_Vectors_rbf.jpg>
 Package pdftex.def Info: abb/change_Support_Vectors_rbf.jpg used on input line 
-269.
+266.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
- (./content.bbl
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [3 <./abb/change_C_linear.jpg> <./abb/change_C_rbf.jpg> <./abb/change_Balances
+_linear.jpg> <./abb/change_Balances_rbf.jpg>] (./content.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-)
+) [4
 
-Package natbib Warning: There were undefined citations.
-
-[4 <./abb/change_Balances_linear.jpg> <./abb/change_Balances_rbf.jpg> <./abb/ch
-ange_Support_Vectors_linear.jpg> <./abb/change_Support_Vectors_rbf.jpg>]
-(./content.aux)
+ <./abb/change_Support_Vectors_linear.jpg> <./abb/change_Support_Vectors_rbf.jp
+g>] (./content.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5318 strings out of 493117
- 78519 string characters out of 6135432
- 391981 words of memory out of 5000000
- 8714 multiletter control sequences out of 15000+600000
+ 5317 strings out of 493117
+ 78509 string characters out of 6135432
+ 385981 words of memory out of 5000000
+ 8713 multiletter control sequences out of 15000+600000
  20749 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,47p,3182b,1338s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,47p,996b,1338s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
-exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/tex
-live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texliv
-e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2
-014/texmf-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2014/texm
-f-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fon
-ts/type1/urw/times/utmr8a.pfb>
-Output written on content.pdf (4 pages, 866012 bytes).
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
+xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
+ive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/texliv
+e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/
+2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/201
+4/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
+/urw/times/utmr8a.pfb>
+Output written on content.pdf (4 pages, 906309 bytes).
 PDF statistics:
- 65 PDF objects out of 1000 (max. 8388607)
- 30 compressed objects within 1 object stream
+ 85 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

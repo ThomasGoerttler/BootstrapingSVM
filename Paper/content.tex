@@ -70,7 +70,7 @@
 \mbox{}\\
 $^1$Humboldt University of Berlin, Unter den Linden 6, 10099 Berlin \\
 $^2$Free University Berlin, Kaiserswerther Str. 16-18, 14195 Berlin \\
-$^3$Technische Universität Berlin, 10623 Berlin \\
+$^3$Technical University of Berlin, 10623 Berlin \\
 thomas.goerttler@gmail.com\\
 c.k.e.koopmann@gmail.com\\
 Patricia.craja@gmx.de\\
@@ -81,29 +81,25 @@ Patricia.craja@gmx.de\\
 \maketitle
 
 \begin{abstract}
-	Support Vector Machines are one of the most successful methods of Machine Learning. After training they can predict for each point a possible class. Unfortunetly there is not uncertaincy captured, that the point is really in this class. We found out a way to calculate variance for a support vector machine. We use bootstrapped samples and take this into account. The variance can be calculated parallized.
+The goal of this project is to apply the bootstrap method to support vector machines (SVMs) in order to estimate the uncertainty of the prediction rule constructed with training samples. We found a way to calculate the variance of SVMs and therefore use parallelization. Moreover we will show how this uncertainty is correlated with other aspects of the SVM, such as the tuning parameter, the balance of the training data and the number of support vector machines. We analyze this impact for both linear and Gaussian Kernel SVMs.
+  
 \end{abstract}
 
 \section{Introduction}
 
-Support Vector Machines are one of the most successful methods of Machine Learning. By reducing non-linear complex decisions problems to linear problems through application of the kernel-Trick, they represent a computationally efficient way to tackle these problems. 
+	Support Vector Machines are one of the most successful methods of Machine Learning. SVMs have many merits that distinguish them from many other machine learning algorithms, including the nonexistence of local minima, the speed of calculation, and the use of only two tuning parameters. Given a binary training data set, an SVM learning algorithm builds a model that predicts the unknown class for new input data, making it a non-probabilistic binary linear classifier. SVM is based on a minimization problem, which seeks for a hyperplane in the feature space that optimally separates data points of two clusters.  By reducing non-linear complex decisions problems to linear problems through application of the Kernel-Trick, they represent a computationally efficient way to tackle these problems. The dimension of the feature space is controlled by the choice of a specific Kernel function. Common Kernels are the linear Kernel, the Gaussian Kernel (RBF) and the Polynomial Kernel.
+    SVMs based on certain Kernels (e.g. Gaussian RBF Kernel) are non parametric methods. Since the distribution of the underlying data is generally unknown so is the finite sample distribution of these methods. 
+There has been considerable research on the asymptotic distribution of SVMs, which have been shown to be asymptotically normally distributed under certain conditions. An alternative idea to estimate these distributions is to use Efrons empirical boot- strap. The idea behind this method is to repeatedly draw samples with replacement from the full data according to the empirical distribution function of the data. Through the repeated calculation of the statistic of interest one can get an estimate of its distribution. For the SVM this estimate has been shown to be consistent under relatively mild conditions.
+    
+ 
 
-svm uses hyperlance space feature to seperate data. The dimension of feature space ist controlled by choice of kernel function. Commen Kernels are the linear kernel, the gausian kernel (rbf) and the polynomial kernel.
-
-SVMs based on certain kernels (e.g. Gaussian RBF Kernel) are non parametric methods. Since the distribution of the underlying data is generally unknown so is the finite sample distribution of these methods. 
-There has been considerable research on the asymptotic distribution of SVMs, which have been shown to be asymptotically normally distributed under certain con- ditions. An alternative idea to estimate these distributions is using Efrons empirical boot- strap. The idea behind this method is to repeatedly draw samples with replacement from the full data according to the empirical distribution function of the data. Through the repeated calculation of the statistic of interest one can get an estimate of its distribution. For the SVM this estimate has been shown to be consistent under relatively mild conditions.
-..
-\section{Background}
-
-What is the status in the science world right now.
-Important has been \textbf{bootstrap, distances and parallelization}
 
 \section{Problem}
+  In contrast to probabilistic classifiers which provide classification with a degree of certainty, SVMs only predict the most likely class that the sample should belong to.  
+Since no adequate distribution theory exists, we provide bootstrapping method to the SVM algorithm to calculate the variance of its predictions. Given the variance, we changed different parameters such as
+the tuning parameter, the data-distribution and SVM attributes in order to analyze the influence of these parameters on the variance.
 
-There is noy way to calculate uncertaincy (variance) of the prediction as we have no assuptions about the distribution.We found out that we can sample variance by bootsrapping.
-Futhermore we found out that they are tuning parameter, data-distribution option and svm attributes that influce this variance.
-
-Predictions are only binary variables and therefore might be identical across all bootstrap samples Therefore we use minimal distance of predictionpoint to decision boundary as real valued substitue 
+Because predictions are only binary variables and therefore might be identical across all bootstrap samples we use minimal distance of prediction point to decision boundary as real valued substitute. 
 
 
 
@@ -162,9 +158,8 @@ def bootstrap_the_svm(trainings_data, prediction_data, kernel, C, gamma = "auto"
 \label{fig1}
 \end{center}
 \end{figure}
-
-
-Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! 
+\subsection{Bootstrapping}
+In order to calculate the variance of the predictions we use bootstrap samples. We start by training the SVM on the full training data. Then we draw N random bootstrap samples with replacement from the full training data and train the SVM N times on each bootstrap sample in a parallelized manner. That way we get N different SVMs, on which we can apply the test data set. For each SVM, we return the distance of each point in the test data set from the decision boundary.  Finally we can calculate the variance of distances for each point in the test data set. We take the average of these N Variances as an indicator for the variance of the prediction rule. Therefore our Bootstrap Method uses as Input the training data set, the test data set, SVM-Parameters, and the amount N of bootstrap replications and it returns the Full SVM as well as the variance of test data distances.
 
 \begin{figure}[!htb]
 \begin{center}
@@ -184,6 +179,9 @@ def get_data_normaly_distributed(coefs, errorCoef, intercept, size):
 \label{fig1}
 \end{center}
 \end{figure}
+\subsection{Data Simulation}
+For the Data Simulation we use two different approaches, the Hyperplane- and the Centroid- Approach. For both we assume to randomly draw $n$ observations for the input variables $x$ from a normal distribution. The Hyperplane-Approach calculates the labels using the formula $y= sign(c+ w^T x + error)$, given the Hyperplane parameter $w$, a constant $c$ as well as the error distribution, whereas the Centroid-Approach calculates the labels using the formula $y= sign(c + a_1*(d(x,z_1)^{-1}... + error)$ given the Centroid- Locations $z_i$, the Centroid- Parameters  $a_i$, a constant $c$ and a distance function $d(a,b)$.
+
 
 \begin{figure}[!htb]
 \begin{center}
@@ -224,13 +222,12 @@ def get_data_centroid_distributed(coefs, locations, errorCoef, size, intercept, 
 
 \section{Results}
 
-There we three indicators we found out. The C Parameter, Balance and number of support vector. Once we used linear, once we used gaussian.
+In this section we will show how the prediction variance is correlated with other aspects of the SVM, such as the tuning parameter $C$, the balance of the training data and the number of support vectors of the original Full-SVM. Analyzing this impact for both linear and Gaussian Kernel SVMs we found following interesting results:
 
- Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! 
 
 \subsection{Influence of the tuning parameter C}
-
- Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels l\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}!ls are powerful\cite{Einstein}! Kernels are powerful\cite{Einstein}! Kernels are powerf
+Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernels are powerful! Kernel
+ 
 
 \begin{figure}[!htb]
 \begin{center}
@@ -274,7 +271,7 @@ There we three indicators we found out. The C Parameter, Balance and number of s
 
 
 \section{Conclusion}
-Nice to work with. I also works whit real datasets
+Nice to work with. It also works whit real datasets
 
 Influence of different aspects on variance
 
@@ -285,7 +282,7 @@ Number of support vectors: Positive influence for Gaussian and negative influenc
 \section{Outlook}
 
 
-Analyse influence of dimensionality on variances. Analyse Data simulated from more "exotic" distributions. Analyse influence of other tuning parameters e.g. "Gamma" of rbf-kernel, degree of polynomial kernel etc.
+Analyze the influence of the dimension on variances. Analyze Data simulated from more "exotic" distributions. Analyze influence of other tuning parameters e.g. "Gamma" of RBF-Kernel, degree of Polynomial Kernel etc.
 
 
 
