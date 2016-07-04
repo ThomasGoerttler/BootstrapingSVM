@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  4 JUL 2016 10:49
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  4 JUL 2016 15:34
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -190,19 +190,19 @@ LaTeX Warning: Label `fig1' multiply defined.
 )
 \openout1 = `content.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 80.
-LaTeX Font Info:    ... okay on input line 80.
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 80.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 77.
+LaTeX Font Info:    ... okay on input line 77.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 77.
  (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
@@ -273,138 +273,125 @@ Package caption Info: listings package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \c@lstlisting=\count111
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 81.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 81.
+(Font)              <7> on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <5> on input line 81.
+(Font)              <5> on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 81.
+(Font)              <12> on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 81.
+(Font)              <8> on input line 78.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 81.
+(Font)              <6> on input line 78.
 
-Overfull \vbox (6.16972pt too high) detected at line 81
+Overfull \vbox (6.16972pt too high) detected at line 78
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 83.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 80.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 88.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 85.
 <abb/distances.jpg, id=1, 718.685pt x 438.63875pt>
 File: abb/distances.jpg Graphic file (type jpg)
  <use abb/distances.jpg>
-Package pdftex.def Info: abb/distances.jpg used on input line 108.
+Package pdftex.def Info: abb/distances.jpg used on input line 105.
 (pdftex.def)             Requested size: 108.405pt x 66.16109pt.
 
 <abb/100_n.jpg, id=3, 578.16pt x 433.62pt>
 File: abb/100_n.jpg Graphic file (type jpg)
  <use abb/100_n.jpg>
-Package pdftex.def Info: abb/100_n.jpg used on input line 116.
+Package pdftex.def Info: abb/100_n.jpg used on input line 113.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/100_y.jpg, id=4, 578.16pt x 433.62pt>
 File: abb/100_y.jpg Graphic file (type jpg)
  <use abb/100_y.jpg>
-Package pdftex.def Info: abb/100_y.jpg used on input line 117.
+Package pdftex.def Info: abb/100_y.jpg used on input line 114.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/1000_n.jpg, id=5, 578.16pt x 433.62pt>
 File: abb/1000_n.jpg Graphic file (type jpg)
  <use abb/1000_n.jpg>
-Package pdftex.def Info: abb/1000_n.jpg used on input line 119.
+Package pdftex.def Info: abb/1000_n.jpg used on input line 116.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
 
 <abb/1000_y.jpg, id=6, 578.16pt x 433.62pt>
 File: abb/1000_y.jpg Graphic file (type jpg)
  <use abb/1000_y.jpg>
-Package pdftex.def Info: abb/1000_y.jpg used on input line 120.
+Package pdftex.def Info: abb/1000_y.jpg used on input line 117.
 (pdftex.def)             Requested size: 108.405pt x 81.30354pt.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 133.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 130.
 
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Overfull \hbox (7.40793pt too wide) in paragraph at lines 153--155
+Overfull \hbox (7.40793pt too wide) in paragraph at lines 150--152
 [][][] 
  []
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 161.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 158.
 [1{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
 
 
  <./abb/distances.jpg>] [2 <./abb/100_n.jpg> <./abb/100_y.jpg> <./abb/1000_n.jp
-g> <./abb/1000_y.jpg>] <abb/change_C_linear.jpg, id=31, 578.16pt x 433.62pt>
-File: abb/change_C_linear.jpg Graphic file (type jpg)
+g> <./abb/1000_y.jpg>] <abb/c_lin.jpg, id=31, 451.6875pt x 301.125pt>
+File: abb/c_lin.jpg Graphic file (type jpg)
 
-<use abb/change_C_linear.jpg>
-Package pdftex.def Info: abb/change_C_linear.jpg used on input line 234.
-(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
+<use abb/c_lin.jpg>
+Package pdftex.def Info: abb/c_lin.jpg used on input line 231.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ <abb/c_rbf.jpg, id=32, 451.6875pt x 301.125pt>
+File: abb/c_rbf.jpg Graphic file (type jpg)
 
-<abb/change_C_rbf.jpg, id=32, 803.0pt x 602.25pt>
-File: abb/change_C_rbf.jpg Graphic file (type jpg)
- <use abb/change_C_rbf.jpg>
-Package pdftex.def Info: abb/change_C_rbf.jpg used on input line 236.
-(pdftex.def)             Requested size: 108.405pt x 81.30023pt.
+<use abb/c_rbf.jpg>
+Package pdftex.def Info: abb/c_rbf.jpg used on input line 233.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ <abb/bal_lin.jpg, id=33, 451.6875pt x 301.125pt>
+File: abb/bal_lin.jpg Graphic file (type jpg)
 
-<abb/change_Balances_linear.jpg, id=33, 578.16pt x 433.62pt>
-File: abb/change_Balances_linear.jpg Graphic file (type jpg)
+<use abb/bal_lin.jpg>
+Package pdftex.def Info: abb/bal_lin.jpg used on input line 247.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ <abb/bal_rbf.jpg, id=34, 451.6875pt x 301.125pt>
+File: abb/bal_rbf.jpg Graphic file (type jpg)
 
-<use abb/change_Balances_linear.jpg>
-Package pdftex.def Info: abb/change_Balances_linear.jpg used on input line 250.
+<use abb/bal_rbf.jpg>
+Package pdftex.def Info: abb/bal_rbf.jpg used on input line 249.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ <abb/n_lin.jpg, id=35, 451.6875pt x 301.125pt>
+File: abb/n_lin.jpg Graphic file (type jpg)
 
-(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
+<use abb/n_lin.jpg>
+Package pdftex.def Info: abb/n_lin.jpg used on input line 261.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ <abb/n_rbf.jpg, id=36, 451.6875pt x 301.125pt>
+File: abb/n_rbf.jpg Graphic file (type jpg)
 
-<abb/change_Balances_rbf.jpg, id=34, 578.16pt x 433.62pt>
-File: abb/change_Balances_rbf.jpg Graphic file (type jpg)
-
-<use abb/change_Balances_rbf.jpg>
-Package pdftex.def Info: abb/change_Balances_rbf.jpg used on input line 252.
-(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
-
-<abb/change_Support_Vectors_linear.jpg, id=35, 578.16pt x 433.62pt>
-File: abb/change_Support_Vectors_linear.jpg Graphic file (type jpg)
-
-<use abb/change_Support_Vectors_linear.jpg>
-Package pdftex.def Info: abb/change_Support_Vectors_linear.jpg used on input li
-ne 264.
-(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
-
-<abb/change_Support_Vectors_rbf.jpg, id=36, 578.16pt x 433.62pt>
-File: abb/change_Support_Vectors_rbf.jpg Graphic file (type jpg)
-
-<use abb/change_Support_Vectors_rbf.jpg>
-Package pdftex.def Info: abb/change_Support_Vectors_rbf.jpg used on input line 
-266.
-(pdftex.def)             Requested size: 108.405pt x 81.30354pt.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3 <./abb/change_C_linear.jpg> <./abb/change_C_rbf.jpg> <./abb/change_Balances
-_linear.jpg> <./abb/change_Balances_rbf.jpg>] (./content.bbl
+<use abb/n_rbf.jpg>
+Package pdftex.def Info: abb/n_rbf.jpg used on input line 263.
+(pdftex.def)             Requested size: 216.81pt x 144.54294pt.
+ [3 <./abb/c_lin.jpg> <./abb/c_rbf.jpg>] (./content.bbl
 
 Package natbib Warning: Empty `thebibliography' environment on input line 3.
 
-) [4
-
- <./abb/change_Support_Vectors_linear.jpg> <./abb/change_Support_Vectors_rbf.jp
-g>] (./content.aux)
+) [4 <./abb/bal_lin.jpg> <./abb/bal_rbf.jpg> <./abb/n_lin.jpg> <./abb/n_rbf.jpg
+>] (./content.aux)
 
 LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 5317 strings out of 493117
- 78509 string characters out of 6135432
- 385981 words of memory out of 5000000
+ 5316 strings out of 493117
+ 78056 string characters out of 6135432
+ 385973 words of memory out of 5000000
  8713 multiletter control sequences out of 15000+600000
  20749 words of font info for 43 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,12n,47p,996b,1338s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,12n,47p,1154b,1338s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/texl
@@ -417,9 +404,9 @@ xmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texm
 f-dist/fonts/type1/urw/courier/ucrr8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
 /urw/times/utmr8a.pfb>
-Output written on content.pdf (4 pages, 906309 bytes).
+Output written on content.pdf (4 pages, 864604 bytes).
 PDF statistics:
- 85 PDF objects out of 1000 (max. 8388607)
+ 79 PDF objects out of 1000 (max. 8388607)
  45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)

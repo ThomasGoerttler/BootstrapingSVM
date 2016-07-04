@@ -15,12 +15,16 @@ do_plot <- function(path, LENGTH, type, main_text, xaxis, yaxis) {
     fit = lm(y ~ x + x2) 
     summary(fit)
     y_hat = predict(fit)
-    plot(x,y, main = main_text , xlab = xaxis, ylab = yaxis)
+    jpeg(paste(main_text, ".jpg"), width = 450, height = 300)
+    plot(x,y, xlab = xaxis, ylab = yaxis)
     lines(x,y_hat)
+    dev.off()
   } else if (type == "line") {
     x = x[-1]
     y = y[-1]
-    plot(x,y, type="b", main = main_text , xlab = xaxis, ylab = yaxis)
+    jpeg(paste(main_text, ".jpg"), width = 450, height = 300)
+    plot(x,y, type="b", xlab = xaxis, ylab = yaxis)
+    dev.off()
   }
 }
 do_plot("change_C_linear.txt", 20, "line", "Changing C Parameter (linear Kernel)", "C", "Mean of Variance")
