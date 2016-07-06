@@ -1,3 +1,32 @@
 \begin{thebibliography}{}
 
+\bibitem[Christmann and Hable, 2013]{christmann_bootstrap_2013}
+Christmann, A. and Hable, R. (2013).
+\newblock On the bootstrap approach for support vector machines and related
+  kernel based methods.
+\newblock In {\em Proceedings 59th {ISI} {World} {Statistics} {Congress},,
+  {Hong} {Kong}. {Session} {CPS}018}.
+
+\bibitem[Cristianini and Shawe-Taylor, 2000]{cristianini_introduction_2000}
+Cristianini, N. and Shawe-Taylor, J. (2000).
+\newblock {\em An introduction to support vector machines and other
+  kernel-based learning methods}.
+\newblock Cambridge university press.
+
+\bibitem[Efron and Tibshirani, 1994]{efron_introduction_1994}
+Efron, B. and Tibshirani, R.~J. (1994).
+\newblock {\em An introduction to the bootstrap}.
+\newblock CRC press.
+
+\bibitem[Hastie et~al., 2005]{hastie_elements_2005}
+Hastie, T., Tibshirani, R., Friedman, J., and Franklin, J. (2005).
+\newblock The elements of statistical learning: data mining, inference and
+  prediction.
+\newblock {\em The Mathematical Intelligencer}, 27(2):83--85.
+
+\bibitem[Steinwart and Christmann, 2008]{steinwart_support_2008}
+Steinwart, I. and Christmann, A. (2008).
+\newblock {\em Support vector machines}.
+\newblock Springer Science \& Business Media.
+
 \end{thebibliography}

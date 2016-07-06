@@ -1,5 +1,5 @@
 
 pdflatex content.tex
-bibtex sample
+bibtex content
 pdflatex content.tex
 open content.pdf
