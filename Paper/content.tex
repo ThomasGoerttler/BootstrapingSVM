@@ -24,7 +24,7 @@ Patricia.craja@gmx.de\\
 
 
 \begin{abstract}
-The goal of this project is the analysis of the variance of Support Vector Machines (SVMs) and the relationship between this variance and other important aspects of the SVM. We provide a characterization of the variance of SVMs using the minimal distance of prediction points to the decision boundary and apply the bootstrap method in order to estimate the uncertainty of the prediction rule. The implementation of the Bootstrap (in Python) is done in a parallelized manner. Finally it will be shown how this variance is correlated with other characteristics of the SVMs, such as the regularization parameter and the number of support vectors, and with the balance of the training data set. This impact is analyzed for both Linear and Gaussian Kernel SVMs. Doing this for both simulated  as well as real data sets produced very similar results. In this paper we therefore concentrate on showing the results obtained for simulated data. 
+The goal of this project is the analysis of the variance of Support Vector Machines (SVMs) and the relationship between this variance and other important aspects of the SVM. We provide a characterization of the variance of SVMs using the minimal distance of prediction points to the decision boundary and apply the bootstrap method in order to estimate the uncertainty of the prediction rule. The implementation of the Bootstrap (in Python) is done in a parallelized manner. Finally it will be shown how this variance is correlated with other characteristics of the SVMs, such as the regularization parameter and the number of support vectors, and with the balance of the training data set. This impact is analyzed for both Linear and Gaussian Kernel SVMs. Doing this for both simulated as well as real data sets produced very similar results. In this paper we therefore concentrate on showing the results obtained for simulated data. 
   
 \end{abstract}
 
@@ -43,7 +43,7 @@ In contrast to probabilistic classifiers which provide classification with a deg
 
 Since no adequate distribution theory exists, we apply the bootstrapping method to the SVM algorithm, i.e. drawing random training samples with replacement from the full training data set to train different SVMs. Through the repeated calculation of the predictions of the test data set we can estimate the prediction variance, which is an indicator of the degree of certainty of the SVM. 
 
-Predictions however are only binary variables. Since they might be identical across all bootstrap samples, we use real valued substitutes such as the minimal distance of each prediction point to the decision boundary (figure \label{fig1}) or the estimated probability of each prediction point to belong to the predicted class. After testing both substitutes we decided to use the minimal distance to the decision boundary as it is easier to understand how these values are calculated. 
+Predictions however are only binary variables. Since they might be identical across all bootstrap samples, we use real valued substitutes such as the minimal distance of each prediction point to the decision boundary (Figure 1\label{fig1}) or the estimated probability of each prediction point to belong to the predicted class. After testing both substitutes we decided to use the minimal distance to the decision boundary as it is easier to understand how these values are calculated. 
 
 
 \begin{figure}[!htb]
@@ -60,7 +60,7 @@ Predictions however are only binary variables. Since they might be identical acr
 \section{Implementation}
 
 \subsection{Bootstrapping}
-In order to calculate the variance of the predictions we use bootstrap samples. We start by training the SVM on the full training data and will call this SVM the \textit{Full SVM}. Then we draw $N$ random bootstrap samples with replacement (\cite{christmann_bootstrap_2013}) from the full training data and train the SVM $N$ times on each bootstrap sample in a parallelized manner. That way we get $N$ different SVMs that predict for each input of the test data of size $n$ to which class it belongs. In figure \label{fig2} the difference in the hyperplanes in the linear can be seen. If the data is perfectly seperated (in a and c) than the variance is smaller than if the data cannot be perfectly seperated. It is also seen, that the variance is smaller if the training data contains more observations.
+In order to calculate the variance of the predictions we use bootstrap samples. We start by training the SVM on the full training data and will call this SVM the \textit{Full SVM}. Then we draw $N$ random bootstrap samples with replacement (\cite{christmann_bootstrap_2013}) from the full training data and train the SVM $N$ times on each bootstrap sample in a parallelized manner. That way we get $N$ different SVMs that predict for each input of the test data of size $n$ to which class it belongs. Figure 2 \label{fig2} illustrates the different results obtained for the linear Kernel for perfectly separated data (a and c) and not perfectly separated data (b and d), as well as for a smaller size of the training data (a and b) and a bigger one (c and d). We observe that the variance is smaller if the data is perfectly separated and if the training data contains more observations.
 
 The $n$ distances of each point in the test data set from the decision boundary can be seen as random variables. For the $N$ SVMs we obtain $N$ different values of these random variables and can calculate their variance. We take the average of these $n$ variances as an indicator for the variance of the \textit{Full SVM}. Therefore our Bootstrap Method uses as input the training data set, the test data set, SVM-Parameters, and the number $N$ of bootstrap replications and it returns the \textit{Full SVM}, its number of support vectors as well as its variance.
 
@@ -72,28 +72,28 @@ The $n$ distances of each point in the test data set from the decision boundary 
 
 \subfloat[Var: 0.12684]{\includegraphics[width=1.5in]{abb/1000_n.jpg}}
 \subfloat[Var: 0.15181]{\includegraphics[width=1.5in]{abb/1000_y.jpg}}
-\caption{In each picture 100 hyperplances are plotted based on samples. In (a) and (c) the data are perfectly seperated wheareas in (b) and (d) small errors occur. In (a) and (b) the trainig data have 100 observations in (c) and (d) 1000.}
+\caption{In each picture 100 hyperplances are plotted based on samples. In (a) and (c) the data are perfectly separated whereas in (b) and (d) small errors occur. In (a) and (b) we used 100 observations in the training data and in (c) and (d) we used 1000.}
 \label{fig2}
 \end{center}
 \end{figure}
 
-\paragraph{Parallelization:} In order to make the bootstrapping efficient, it is parallelized. A pool of processes is created to carry out tasks submitted to it using the Python \texttt{Pool} class. Each process trains a certain numbers of SVMs on Bootstrap Samples and calculates the distances for each test point. The results from each process are then collected in an array which is used to calculate the statistics mentioned above. Since the training of each SVM is independent of the others, the parallelization of this algorithm is relatively straight forward.
+\paragraph{Parallelization:} In order to make the bootstrapping efficient, it is parallelized. A pool of processes is created to carry out tasks submitted to it using the Python \texttt{Pool} class. Each process trains a certain numbers of SVMs on bootstrap samples and calculates the distances for each test point. The results from each process are then collected in an array which is used to calculate the statistics mentioned above. Since the training of each SVM is independent of the others, the parallelization of this algorithm is relatively straight forward.
 
 \subsection{Data Simulation}
-For the Data Simulation we use two different approaches, the Hyperplane- and the Centroid- Approach. For both we randomly draw $n$ observations for each of the input variables $x$ from a normal distribution. The Hyperplane-Approach calculates the labels using the formula $y= sign(c+ w^T x + error)$, given the Hyperplane parameter $w$, a constant $c$ as well as the error distribution, whereas the Centroid-Approach calculates the labels using the formula $y= sign(c + a_1*(d(x,z_1)^{-1}... + error)$ given the Centroid- Locations $z_i$, the Centroid- Parameters  $a_i$, a constant $c$ and a distance function $d(a,b)$.
-To change the number of support vectors of a data set the variance of the error is modified, whereas the intercept controlls the balance of the dataset.
+For the Data Simulation we use two different approaches, the Hyperplane- and the Centroid- Approach. For both we randomly draw $n$ observations for each of the input variables $x$ from a normal distribution. The Hyperplane-Approach calculates the labels using the formula $y= sign(c+ w^T x + error)$, given the Hyperplane-Parameter $w$, a constant $c$ as well as the error distribution, whereas the Centroid-Approach calculates the labels using the formula $y= sign(c + a_1*(d(x,z_1)^{-1}... + error)$ given the Centroid- Locations $z_i$, the Centroid- Parameters  $a_i$, a constant $c$ and a distance function $d(a,b)$.
+To change the number of support vectors of a data set the variance of the error is modified, whereas the intercept controls the balance of the data set.
 
 
 \section{Results}
 
-In this section we will show how the prediction variance is correlated with other aspects of the SVM, such as the regularization parameter $C$, the balance of the training data set and the number of support vectors of the original Full-SVM. Analyzing this impact for both Linear  and Gaussian Kernel SVMs produced the following results:
+In this section we will show how the prediction variance is correlated with other aspects of the SVM, such as the regularization parameter $C$, the balance of the training data set and the number of support vectors of the original \textit{Full SVM}. Analyzing this impact for both Linear  and Gaussian Kernel SVMs produced the following results:
 
 \begin{figure}[!htb]
 \begin{center}
 \subfloat[]{\includegraphics[width=3in]{abb/c_lin.jpg}}
 
 \subfloat[]{\includegraphics[width=3in]{abb/c_rbf.jpg}}
-\caption{The results for changing the regularization parameter $C$. On the y-axis the mean of the variance of 20 different datasets for each $C$ is seen. Each datasets has 100 overservations and 1000 replications are done. (a) shows the result for the linear kernel, (b) for the gaussian.}
+\caption{Relation between the variance mean and the regularization parameter $C$. The y-axis represents the mean of the variance of 20 different data sets for each value of $C$. The size of each data set is n=100 and N=1000 replications are done. (a) corresponds to the Linear, (b) to the Gaussian Kernel.}
 \label{fig3}
 \end{center}
 \end{figure}
@@ -102,11 +102,11 @@ In this section we will show how the prediction variance is correlated with othe
 
 \subsection{Influence of the regularization parameter C}
 \paragraph{Observations:}
-As seen in figure \label{fig3}, changing the regularization parameter $C$ we obtained similar results for both Linear and Gaussian Kernel SVMs. The higher the regularization parameter $C$, the higher will be the variance of the SVM-predictions. The parameter $C$ is therefore positively correlated with the variance.
+As seen in Figure 3\label{fig3}, by changing the regularization parameter $C$ we obtained similar results for both Linear and Gaussian Kernel SVMs. The higher the regularization parameter $C$, the higher will be the variance of the SVM-predictions. The parameter $C$ is therefore positively correlated with the variance.
 \paragraph{Interpretation:}
 The parameter C controls the trade off between errors of the SVM on training data and margin maximization. To avoid overfitting, the SVM employs regularization and controls the amount of regularization by the constant $C$ (\cite{hastie_elements_2005}). A high value of $C$ corresponds to low regularization, i.e. lower size of slack variables and therefore higher overfitting, which means that the SVM fits the training data too well but does not generalize to new data and therefore the variance of the predictions of our test data rises.
 
-Figure 6 shows this relation for values between 0 and 2 of the parameter $C$ 
+Figure 3 shows this relation for values between 0 and 2 of the parameter $C$ 
 for Linear and Gaussian Kernels. Because each value of $C$ corresponds to a different \textit{Full SVM}, we calculated the average of 20 SVM variances for each value of C, i.e. 20 test data set variances as explained at the beginning (using $N$=1000 Bootstrap Replications, and $n$=100 data points).
  
 \begin{figure}[!htb]
@@ -114,7 +114,7 @@ for Linear and Gaussian Kernels. Because each value of $C$ corresponds to a diff
 \subfloat[]{\includegraphics[width=3in]{abb/n_lin.jpg}}
 
 \subfloat[]{\includegraphics[width=3in]{abb/n_rbf.jpg}}
-\caption{In these graphs the variance is plotted against the number of support vectors. Each dataset has 1000 observations and 500 samples are drawn. (a) shows the result for the linear kernel, (b) for the gaussian.}
+\caption{Relation between the variance and the number of support vectors. The data set size is n=1000 and N=500 replications are done. (a) corresponds to the Linear, (b) to the Gaussian Kernel.}
 \label{fig4}
 \end{center}
 \end{figure}
@@ -122,7 +122,7 @@ for Linear and Gaussian Kernels. Because each value of $C$ corresponds to a diff
 
 \subsection{Influence of the number of support vectors}
 \paragraph{Observations:}
-In figure \label{fig4} it can be seen, that changing the number of support vectors for the \textit{Full SVM} we obtain different results for Linear and Gaussian Kernels. For the Linear Kernel, the variance of the SVM decreases with an increase in support vectors, whereas for the Gaussian Kernel the variance increases with more support vectors. The number of support vectors is therefore negatively correlated with the variance of the Linear Kernel and positively correlated with the variance of the Gaussian Kernel.
+In Figure 4\label{fig4} it can be seen, that changing the number of support vectors for the \textit{Full SVM} we obtained different results for Linear and Gaussian Kernels. For the Linear Kernel, the variance of the SVM decreases with an increase in support vectors, whereas for the Gaussian Kernel the variance increases with more support vectors. The number of support vectors is therefore negatively correlated with the variance of the Linear Kernel and positively correlated with the variance of the Gaussian Kernel.
 \paragraph{Interpretation:}
 The number of support vectors controls the slack variables of the soft margin SVM. A high number of support vectors implies larger margins and higher slack variables. Training the Linear SVM on the bootstrap samples is therefore more robust and the variance of the decision boundary as well as the distance from each point of the test data set to the decision boundary has smaller variation.
 For Gaussian Kernels, a higher number of support vectors might imply overfitting on the training data set and therefore bad generalization to new data which could be the reason why the variance of the predictions of our test data rises.
@@ -132,32 +132,32 @@ For Gaussian Kernels, a higher number of support vectors might imply overfitting
 \subfloat[]{\includegraphics[width=3in]{abb/bal_lin.jpg}}
 
 \subfloat[]{\includegraphics[width=3in]{abb/bal_rbf.jpg}}
-\caption{In the figures the variances are shown dependet on the balance of thre data. Each dataset has 500 observations and 1000 samples are drawn (a) shows the result for the linear kernel, (b) for the gaussian.}
+\caption{Relation between variance and balance of the data. The data set size is n=500 and N=1000 replications are done. (a) corresponds to the Linear, (b) to the Gaussian Kernel.}
 \label{fig5}
 \end{center}
 \end{figure}
 
 
-\subsection{Influence of the balance of the training dataset}
+\subsection{Influence of the balance of the training data set}
 
 \paragraph{Observations:}
-Changing the balance of the tranings data set, from which the samples are taken, we obtain different results for the Linear and Gaussian Kernels, as  seen in figure \label{fig5}. As expected the resulting graph is symetric around 0.5 for both kernels. For the Linear Kernel, the variance of the SVM is higher when the data is unbalanced and smallest when the data is perfectly balanced. However, for the Gaussian Kernel the variance is the highest when the data is perfectly balanced. 
+Changing the balance of the training data set, from which the samples are taken, we obtain different results for the Linear and Gaussian Kernels, as  seen in Figure 5\label{fig5}. As expected the resulting graph is symmetric around 0.5 for both kernels. For the Linear Kernel, the variance of the SVM rises when the data is unbalanced and it is minimal for perfectly balanced data. However, for the Gaussian Kernel the maximal variance is attained for perfectly balanced data, and it drops for unbalanced data. 
 \paragraph{Interpretation:}
-In the linear case the variance is especially high, when one class is really small compared to the other class. The location of the linear hyperplance is on the few points from the smaller class. Depending on  which points are sampled  from this class, the decision boundary and therefore the distance of test points to this boundary might vary dramatically.
-The Gaussian kernel shows exactly the opposite results. This occurs because the Gaussian Kernel tends to overfit the data on the trainings sets (\cite{hastie_elements_2005}). We have taken 1000 samples from the data set. If the data are perfectly balanced, there are more possible different samples of the smaller group possible. Therefore the hyperplanes differ more. If the smaller class is really small, the sample from the smaller class can not differ that much from each other.
-Nevertheless it can be obtained, that the effect is extremly high in the tails and rather small between a balance of 0.3 to 0.7 .
+In the linear case the variance is especially high, when one class is very small compared to the other class. The location of the linear hyperplane is on the few points from the smaller class. Depending on  which points are sampled from this class, the decision boundary and therefore the distance of test points to this boundary might vary dramatically.
+The Gaussian Kernel shows exactly the opposite results. This occurs because the Gaussian Kernel tends to overfit the data on the training data sets (\cite{hastie_elements_2005}). We have taken 1000 samples from the data set. If the data is perfectly balanced, more different samples of the smaller group are possible. Therefore the hyperplanes differ more. If the smaller class is very small, the sample from the smaller class can not differ that much from each other.
+Nevertheless it can be obtained, that the effect is extremely high in the tails and rather small between a balance of 0.3 to 0.7 .
 
 
 \section{Conclusion}
 
-Calculating the variances by using bootstrap samples seems to be a quite good idea to calculate a variance. The variance of distances of test points seems to be a good indicator for the robustness of the SVM as shown in figure \label{fig2}.
-The results of changig the $C$-parameter are not surprising but confirm the strengh of the variance estimator.
-Especially interesting and to some degree counterintuitive are the different effects of support vectors and data balance for each kernel.
-Overall the bootstrapping method has once again shown its value for situations where classical methods of statistical inference are not availabe.
+Calculating the variances by using bootstrap samples seems to be a quite good idea to calculate a variance. The variance of distances of test points seems to be a good indicator for the robustness of the SVM as shown in Figure 2 \label{fig2}.
+The results of changing the $C$-parameter are not surprising but confirm the strength of the variance estimator.
+Especially interesting and to some degree counterintuitive are the different effects of support vectors and data balance on the Kernels.
+Overall the bootstrapping method has once again shown its value for situations where classical methods of statistical inference are not available.
 
 \section{Outlook}
 
-Further analysis which can be interesting in this project are to look for the influence of the dimensionality on variances. The influence of other tuning parameter such as the gamma parameter of the rbf-kernel or the degree of polynomial kernel could be interesting areas of inquiry. Also in this context we could only give rough explanations for the findings. More accurate explanations might be found when analysing one of the aspects in more detail. Also despite the parallelization of the algorithm the procedures are still computationally very intensive. Using more  ample computing ressources (and thereby increasing both the number of observations as well as bootstrap samples) would probably lead to even more reliable results.
+Further interesting analysis would be to look for the influence of the dimensionality on variances. The influence of other tuning parameters such as the gamma parameter of the RBF-Kernel or the degree of Polynomial Kernels could be interesting areas of inquiry. Also in this context we could only give rough explanations for the findings. More accurate explanations might be found when analysing one of the aspects in more detail. Also despite the parallelization of the algorithm the procedures are still computationally very intensive. Using more sample computing resources (and thereby increasing both the number of observations as well as bootstrap samples) would probably lead to even more reliable results.
 
 
 \footnotesize
