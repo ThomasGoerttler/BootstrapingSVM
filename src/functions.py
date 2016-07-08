@@ -15,13 +15,7 @@ import statistics
 import datetime
 
 
-def bootstrap_the_svm(trainings_data, prediction_data, kernel, C, gamma, degree, processes, replications):
-    result = do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma, degree, processes, replications)
-    res = Bootstrap_Result(result[0], result[1], result[2], result[3], result[4], result[0].n_support_ )
-    return(res)
-
-def do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma = "auto", degree = 3, processes = 1, replications = 10):
-
+def bootstrap_the_svm(trainings_data, prediction_data, kernel, C, gamma = "auto", degree = 3, processes = 1, replications = 10):
     
     input_parameters = SVM_Input(trainings_data, prediction_data, kernel, C, gamma, degree)
 
@@ -40,9 +34,9 @@ def do_Bootstrap(trainings_data, prediction_data, kernel, C, gamma = "auto", deg
     
     variance_of_svm_probabilites = calculate_variance_of_svm(points_information.probabilites)
     variance_of_svm_distance_to_hyperplane = calculate_variance_of_svm(points_information.distances)
-        
-    return([real_svm[0], real_svm[1], real_svm[2], variance_of_svm_probabilites, variance_of_svm_distance_to_hyperplane])
     
+        
+    return(Bootstrap_Result(real_svm[0], real_svm[1], real_svm[2], variance_of_svm_probabilites, variance_of_svm_distance_to_hyperplane, real_svm[0].n_support_))
     
 def random_sample_with_replacement(population, sample_size):
     "Chooses k random elements (with replacement) from a population"
@@ -183,4 +177,14 @@ def centroidSimulation(coefs, locations, errorCoef, size, intercept, distance, x
 	#distances = list(zip(*distances))
 	return([y,X])	
 	
+def do_quadratic_regression(x, y, x_start, x_end):
+    x = array(x)
+    y = array(y)
+    x2 = x * x
+    X = array([ones(len(x)), x, x2])
+    coefficients = linalg.lstsq(X.T,y)[0]
+    
+    xx = linspace(x_start, x_end)
+    yy = coefficients[0] + coefficients[1] * xx + coefficients[2] * (xx * xx)
+    plt.plot(xx, yy, '-k', color = "green")    
 	

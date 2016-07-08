@@ -5,16 +5,6 @@ from numpy import *
 import math
 import matplotlib.pyplot as plt
 
-def do_quadratic_regression(x, y, x_start, x_end):
-    x = array(x)
-    y = array(y)
-    x2 = x * x
-    X = array([ones(len(x)), x, x2])
-    coefficients = linalg.lstsq(X.T,y)[0]
-    
-    xx = linspace(x_start, x_end)
-    yy = coefficients[0] + coefficients[1] * xx + coefficients[2] * (xx * xx)
-    plt.plot(xx, yy, '-k', color = "green")    
 
 if __name__ == '__main__':
     
@@ -31,7 +21,7 @@ if __name__ == '__main__':
     replications = 500
     kernel = 'linear'
     ### important if you want to know in the filename which distribution the data hase
-    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3, -0.7, 0.8, 12], 1, 0, n)'
+    simulation_function = 'dataSimulation([0.8, 0.7, 0.9, -0.3], 1, 0, n)'
     
     ### 2. Part: CALCULATION
     
