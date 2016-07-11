@@ -1,2 +1,5 @@
-pdflatex Postervorlage.tex
-open Postervorlage.pdf
+
+pdflatex conference_poster_6.tex
+bibtex conference_poster_6
+pdflatex conference_poster_6.tex
+open conference_poster_6.pdf
