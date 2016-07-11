@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  11 JUL 2016 16:19
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.10.23)  11 JUL 2016 16:29
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -292,23 +292,7 @@ Package caption Info: We need package `newfloat' on input line 50.
 (/usr/local/texlive/2014/texmf-dist/tex/latex/caption/newfloat.sty
 Package: newfloat 2013/05/11 v1.1-91 Defining new floating environments (AR)
 )
-(./conference_poster_6.aux
-
-LaTeX Warning: Label `fig3' multiply defined.
-
-
-LaTeX Warning: Label `fig3' multiply defined.
-
-
-LaTeX Warning: Label `fig4' multiply defined.
-
-
-LaTeX Warning: Label `fig5' multiply defined.
-
-
-LaTeX Warning: Label `fig2' multiply defined.
-
-)
+(./conference_poster_6.aux)
 \openout1 = `conference_poster_6.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
@@ -324,7 +308,8 @@ LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
 LaTeX Font Info:    ... okay on input line 51.
 LaTeX Font Info:    Try loading font information for OT1+ptm on input line 51.
- (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+
+(/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 (/usr/local/texlive/2014/texmf-dist/tex/context/base/supp-pdf.mkii
@@ -394,18 +379,18 @@ Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <51.6> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 64.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <29.86> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 66.
-LaTeX Font Info:    Try loading font information for OT1+pcr on input line 70.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 65.
+LaTeX Font Info:    Try loading font information for OT1+pcr on input line 69.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/ot1pcr.fd
 File: ot1pcr.fd 2001/06/04 font definitions for OT1/pcr.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 64--71
+Underfull \hbox (badness 10000) in paragraph at lines 64--70
 \OT1/pcr/m/n/24.88 thomas.goerttler@gmail.com, c.k.e.koopmann@gmail.com,
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--71
+Underfull \hbox (badness 10000) in paragraph at lines 64--70
 
  []
 
@@ -413,44 +398,69 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--71
 File: figures/husiegel_bw.pdf Graphic file (type pdf)
 
 <use figures/husiegel_bw.pdf>
-Package pdftex.def Info: figures/husiegel_bw.pdf used on input line 76.
+Package pdftex.def Info: figures/husiegel_bw.pdf used on input line 75.
 (pdftex.def)             Requested size: 348.00797pt x 350.72186pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 94.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <35.83> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 103.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 102.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 104.
+
+
+LaTeX Warning: Citation `steinwart_support_2008' on page 1 undefined on input l
+ine 104.
+
+
+LaTeX Warning: Citation `cristianini_introduction_2000' on page 1 undefined on 
+input line 104.
+
+
+LaTeX Warning: Citation `hastie_elements_2005' on page 1 undefined on input lin
+e 106.
+
+
+LaTeX Warning: Citation `efron_introduction_1994' on page 1 undefined on input 
+line 108.
 
 <abb/distances.jpg, id=2, 718.685pt x 438.63875pt>
 File: abb/distances.jpg Graphic file (type jpg)
  <use abb/distances.jpg>
-Package pdftex.def Info: abb/distances.jpg used on input line 127.
+Package pdftex.def Info: abb/distances.jpg used on input line 126.
 (pdftex.def)             Requested size: 349.86855pt x 213.5427pt.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 128.
-LaTeX Font Info:    Try loading font information for U+msa on input line 140.
+LaTeX Font Info:    Try loading font information for U+msa on input line 139.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 140.
+LaTeX Font Info:    Try loading font information for U+msb on input line 139.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+
+LaTeX Warning: Citation `christmann_bootstrap_2013' on page 1 undefined on inpu
+t line 139.
+
 <abb/pic.jpg, id=4, 1168.0pt x 876.0pt>
 File: abb/pic.jpg Graphic file (type jpg)
  <use abb/pic.jpg>
-Package pdftex.def Info: abb/pic.jpg used on input line 145.
+Package pdftex.def Info: abb/pic.jpg used on input line 144.
 (pdftex.def)             Requested size: 437.33403pt x 328.00462pt.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 151.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 150.
 
 <abb/c.jpg, id=5, 451.6875pt x 602.25pt>
 File: abb/c.jpg Graphic file (type jpg)
  <use abb/c.jpg>
-Package pdftex.def Info: abb/c.jpg used on input line 167.
+Package pdftex.def Info: abb/c.jpg used on input line 166.
 (pdftex.def)             Requested size: 437.33403pt x 583.14337pt.
- [1
+
+
+LaTeX Warning: Citation `hastie_elements_2005' on page 1 undefined on input lin
+e 177.
+
+[1
 
 
 Non-PDF special ignored!{/usr/local/texlive/2014/texmf-var/fonts/map/pdftex/upd
@@ -459,42 +469,44 @@ g> <./abb/c.jpg>] <abb/n_support.jpg, id=23, 451.6875pt x 602.25pt>
 File: abb/n_support.jpg Graphic file (type jpg)
 
 <use abb/n_support.jpg>
-Package pdftex.def Info: abb/n_support.jpg used on input line 184.
+Package pdftex.def Info: abb/n_support.jpg used on input line 183.
 (pdftex.def)             Requested size: 437.33403pt x 583.14337pt.
  <abb/balance.jpg, id=24, 451.6875pt x 602.25pt>
 File: abb/balance.jpg Graphic file (type jpg)
 
 <use abb/balance.jpg>
-Package pdftex.def Info: abb/balance.jpg used on input line 198.
+Package pdftex.def Info: abb/balance.jpg used on input line 197.
 (pdftex.def)             Requested size: 437.33403pt x 583.14337pt.
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 226.
 
+
+LaTeX Warning: Citation `hastie_elements_2005' on page 2 undefined on input lin
+e 211.
+
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 225.
 
 (/usr/local/texlive/2014/texmf-dist/tex/latex/psnfss/omsptm.fd
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <17.28> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 226.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 225.
 
-(./conference_poster_6.bbl
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ­ in font ptmr7t!
-Missing character: There is no Ã in font ptmr7t!
-Missing character: There is no ¡ in font ptmr7t!
-) [2 <./abb/n_support.jpg> <./abb/balance.jpg>]
+(./conference_poster_6.bbl) [2 <./abb/n_support.jpg> <./abb/balance.jpg>]
 (./conference_poster_6.aux)
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
  ) 
 Here is how much of TeX's memory you used:
- 4832 strings out of 493117
- 73004 string characters out of 6135432
- 175990 words of memory out of 5000000
- 8196 multiletter control sequences out of 15000+600000
- 27297 words of font info for 58 fonts, out of 8000000 for 9000
+ 4827 strings out of 493117
+ 72918 string characters out of 6135432
+ 166895 words of memory out of 5000000
+ 8192 multiletter control sequences out of 15000+600000
+ 25106 words of font info for 55 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 44i,6n,42p,1070b,431s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 44i,6n,42p,1070b,404s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/local/t
 exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/local/te
 xlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texl
@@ -504,7 +516,7 @@ e/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive
 xmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/local/texlive/2014/texmf-dist/f
 onts/type1/urw/times/utmr8a.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1
 /urw/times/utmri8a.pfb>
-Output written on conference_poster_6.pdf (2 pages, 749146 bytes).
+Output written on conference_poster_6.pdf (2 pages, 739023 bytes).
 PDF statistics:
  55 PDF objects out of 1000 (max. 8388607)
  35 compressed objects within 1 object stream
