@@ -1,12 +1,5 @@
 \begin{thebibliography}{1}
 
-\bibitem{christmann_bootstrap_2013}
-Andreas Christmann and Robert Hable.
-\newblock On the bootstrap approach for support vector machines and related
-  kernel based methods.
-\newblock In {\em Proceedings 59th {ISI} {World} {Statistics} {Congress},,
-  {Hong} {Kong}. {Session} {CPS}018}, 2013.
-
 \bibitem{cristianini_introduction_2000}
 Nello Cristianini and John Shawe-Taylor.
 \newblock {\em An introduction to support vector machines and other

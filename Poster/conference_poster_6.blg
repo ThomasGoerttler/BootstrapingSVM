@@ -3,44 +3,46 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: conference_poster_6.aux
 The style file: plain.bst
 Database file #1: sample.bib
-You've used 5 entries,
+Warning--I didn't find a database entry for "christmann_bootstrap_2013"
+You've used 4 entries,
             2118 wiz_defined-function locations,
-            524 strings with 4886 characters,
-and the built_in function-call counts, 1428 in all, are:
-= -- 126
-> -- 75
+            520 strings with 4669 characters,
+and the built_in function-call counts, 1156 in all, are:
+= -- 103
+> -- 62
 < -- 0
-+ -- 32
-- -- 24
-* -- 84
-:= -- 251
-add.period$ -- 15
-call.type$ -- 5
-change.case$ -- 24
++ -- 27
+- -- 20
+* -- 71
+:= -- 206
+add.period$ -- 12
+call.type$ -- 4
+change.case$ -- 19
 chr.to.int$ -- 0
-cite$ -- 5
-duplicate$ -- 61
-empty$ -- 120
-format.name$ -- 24
-if$ -- 293
+cite$ -- 4
+duplicate$ -- 47
+empty$ -- 92
+format.name$ -- 20
+if$ -- 234
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 8
-newline$ -- 28
-num.names$ -- 10
-pop$ -- 41
+int.to.str$ -- 4
+missing$ -- 7
+newline$ -- 23
+num.names$ -- 8
+pop$ -- 32
 preamble$ -- 1
-purify$ -- 22
+purify$ -- 18
 quote$ -- 0
-skip$ -- 36
+skip$ -- 28
 stack$ -- 0
-substring$ -- 47
-swap$ -- 6
+substring$ -- 42
+swap$ -- 4
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 14
+type$ -- 10
 warning$ -- 0
-while$ -- 12
-width$ -- 6
-write$ -- 53
+while$ -- 10
+width$ -- 5
+write$ -- 43
+(There was 1 warning)
